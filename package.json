@@ -1,0 +1,9 @@
+{
+  "name": "kesaribyshammirandhawa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static clone of the Pomelli-generated Kesari by Shammi Randhawa website.",
+  "scripts": {
+    "dev": "python -m http.server 4173 --bind 127.0.0.1"
+  }
+}
