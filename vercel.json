@@ -5,7 +5,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'sha256-AgFnzlap3gBza0KzgO9LHPBRkVdb2pSriQkDJLGXvC8=' 'sha256-E7ydmaRshroLAXA77tzgJBeJlwTabAKvwsMWOrhzoHw=' 'sha256-sccwYtWc27ledVTb0wFknK0ho9i4lALOPdVCObyqHd4='; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://stats.g.doubleclick.net; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; upgrade-insecure-requests"
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'none'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'sha256-AgFnzlap3gBza0KzgO9LHPBRkVdb2pSriQkDJLGXvC8=' 'sha256-E7ydmaRshroLAXA77tzgJBeJlwTabAKvwsMWOrhzoHw=' 'sha256-N2iGf7bX2UD3PwYtUJcTXJwIgu32SQPHiV7PD96iYNQ='; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://www.google.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; upgrade-insecure-requests"
         },
         {
           "key": "X-Content-Type-Options",
