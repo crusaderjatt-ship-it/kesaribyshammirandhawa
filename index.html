@@ -30,6 +30,7 @@
     <meta name="twitter:description" content="Discover bespoke Indian couture rooted in Punjabi heritage. We craft your thoughts to design at Kesari.">
     <meta name="twitter:image" content="https://www.kesaribyshammirandhawa.com/assets/aU41XMOdzjD7zwJi2eQ_KZ.png">
     <meta name="twitter:image:alt" content="Kesari by Shammi Randhawa bespoke Indian couture ensemble">
+    <link rel="preload" as="image" href="assets/optimized/hero-silk.webp" fetchpriority="high">
 
     <script type="application/ld+json">
     {
@@ -52,7 +53,7 @@
           "name": "Kesari by Shammi Randhawa",
           "url": "https://www.kesaribyshammirandhawa.com/",
           "image": "https://www.kesaribyshammirandhawa.com/assets/aU41XMOdzjD7zwJi2eQ_KZ.png",
-          "logo": "https://www.kesaribyshammirandhawa.com/assets/9W9I7ptqlcicZrKD7Sx4Kv.png",
+          "logo": "https://www.kesaribyshammirandhawa.com/assets/optimized/logo.webp",
           "description": "Bespoke Indian couture brand in Chandigarh crafting handcrafted bridal and occasion wear rooted in Punjabi heritage.",
           "telephone": "+91 9779020446",
           "address": {
@@ -135,7 +136,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
@@ -248,9 +248,8 @@
             cursor: pointer;
         }
 
-        .btn i {
+        .btn .icon {
             margin-right: 0.5rem;
-            font-size: 1.1em;
         }
 
         .btn-primary {
@@ -638,7 +637,19 @@
         .social-icon {
             color: var(--col-gold);
             transition: color 0.3s ease, transform 0.3s ease;
-            display: inline-block;
+            display: inline-flex;
+        }
+
+        .icon {
+            width: 1.1em;
+            height: 1.1em;
+            fill: currentColor;
+            flex: 0 0 auto;
+        }
+
+        .social-icon .icon {
+            width: 2rem;
+            height: 2rem;
         }
 
         .social-icon:hover {
@@ -838,9 +849,10 @@
                 display: none;
             }
 
-            .header .btn i {
+            .header .btn .icon {
                 margin-right: 0;
-                font-size: 1.2rem;
+                width: 1.2rem;
+                height: 1.2rem;
             }
             
             .hero-content {
@@ -863,13 +875,21 @@
     </style>
 </head>
 <body id="top">
+    <svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+        <symbol id="icon-instagram" viewBox="0 0 24 24">
+            <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm8.75 2.05a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8ZM12 7.25A4.75 4.75 0 1 1 12 16.75 4.75 4.75 0 0 1 12 7.25Zm0 2A2.75 2.75 0 1 0 12 14.75 2.75 2.75 0 0 0 12 9.25Z"/>
+        </symbol>
+        <symbol id="icon-facebook" viewBox="0 0 24 24">
+            <path d="M22 12.06C22 6.49 17.52 2 12 2S2 6.49 2 12.06C2 17.08 5.66 21.25 10.44 22v-7.03H7.9v-2.91h2.54V9.84c0-2.52 1.49-3.91 3.77-3.91 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.9h2.78l-.44 2.91h-2.34V22C18.34 21.25 22 17.08 22 12.06Z"/>
+        </symbol>
+    </svg>
 
     <!-- Header -->
     <header class="header">
         <div class="container header-inner">
             <div class="logo-container">
                 <a href="#top" aria-label="Kesari by Shammi Randhawa Home">
-                    <img src="assets/9W9I7ptqlcicZrKD7Sx4Kv.png" alt="Kesari by Shammi Randhawa Logo - Bespoke Indian Couture" itemprop="logo">
+                    <img src="assets/optimized/logo.webp" width="520" height="293" alt="Kesari by Shammi Randhawa Logo - Bespoke Indian Couture" itemprop="logo" decoding="async">
                 </a>
             </div>
             
@@ -887,7 +907,7 @@
 
             <div class="mobile-actions">
                 <a href="https://www.instagram.com/kesaribyshammi_randhawa/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Visit our Instagram">
-                    <i class="fab fa-instagram"></i> <span class="btn-text">Instagram</span>
+                    <svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg> <span class="btn-text">Instagram</span>
                 </a>
                 <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle mobile menu">
                     <span></span>
@@ -900,7 +920,7 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-bg" data-alt="Close-up macro photography of rich, flowing gold and cream silk fabric with intricate, subtle floral embroidery textures. Warm, regal ambient lighting creating soft rolling shadows and luminous highlights across the folds. The composition feels highly luxurious, bespoke, and unhurried. No text, signage, or lettering." style="background-image: url('assets/9l2O3b_NQOe9a8kt3DX_SC.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="hero-bg" data-alt="Close-up macro photography of rich, flowing gold and cream silk fabric with intricate, subtle floral embroidery textures. Warm, regal ambient lighting creating soft rolling shadows and luminous highlights across the folds. The composition feels highly luxurious, bespoke, and unhurried. No text, signage, or lettering." style="background-image: url('assets/optimized/hero-silk.webp'); background-size: cover; background-position: center;"></div>
             <div class="hero-overlay"></div>
             <div class="container">
                 <div class="hero-content">
@@ -961,7 +981,7 @@
                     <!-- Product 1 -->
                     <div class="product-card" itemscope itemtype="http://schema.org/Product">
                         <div class="product-image-wrapper">
-                            <img src="assets/aU41XMOdzjD7zwJi2eQ_KZ.png" alt="Woman posing in Kesari Velvet Punjabi Ensemble in Ruby Red with gold embroidery" itemprop="image">
+                            <img src="assets/optimized/velvet-punjabi.webp" width="640" height="1138" alt="Woman posing in Kesari Velvet Punjabi Ensemble in Ruby Red with gold embroidery" itemprop="image" loading="lazy" decoding="async">
                         </div>
                         <div class="product-info">
                             <h3 itemprop="name">Kesari Velvet Punjabi Ensemble - Ruby Red</h3>
@@ -976,7 +996,7 @@
                             </ul>
                             <div itemprop="brand" itemscope itemtype="http://schema.org/Brand" style="display:none;"><meta itemprop="name" content="Kesari by Shammi Randhawa"></div>
                             <a href="https://www.instagram.com/kesaribyshammi_randhawa/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Inquire about Velvet Punjabi Ensemble on Instagram">
-                                <i class="fab fa-instagram"></i> Inquire on Instagram
+                                <svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg> Inquire on Instagram
                             </a>
                         </div>
                     </div>
@@ -984,7 +1004,7 @@
                     <!-- Product 2 -->
                     <div class="product-card" itemscope itemtype="http://schema.org/Product">
                         <div class="product-image-wrapper">
-                            <img src="assets/8kruvOEvf_adFMX3FBaOq_.png" alt="Woman modeling Kesari Crimson & Ivory Festive Ensemble with flowing skirt" itemprop="image">
+                            <img src="assets/optimized/crimson-ivory.webp" width="640" height="1138" alt="Woman modeling Kesari Crimson & Ivory Festive Ensemble with flowing skirt" itemprop="image" loading="lazy" decoding="async">
                         </div>
                         <div class="product-info">
                             <h3 itemprop="name">Kesari Crimson & Ivory Festive Ensemble</h3>
@@ -999,7 +1019,7 @@
                             </ul>
                             <div itemprop="brand" itemscope itemtype="http://schema.org/Brand" style="display:none;"><meta itemprop="name" content="Kesari by Shammi Randhawa"></div>
                             <a href="https://www.instagram.com/kesaribyshammi_randhawa/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Inquire about Crimson & Ivory Festive Ensemble on Instagram">
-                                <i class="fab fa-instagram"></i> Inquire on Instagram
+                                <svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg> Inquire on Instagram
                             </a>
                         </div>
                     </div>
@@ -1007,7 +1027,7 @@
                     <!-- Product 3 -->
                     <div class="product-card" itemscope itemtype="http://schema.org/Product">
                         <div class="product-image-wrapper">
-                            <img src="assets/8Wum4z2lsPS2WcrzDZwkk3.png" alt="Woman holding potli bag wearing Gulbahaar Fuchsia Silk Suit Set in Fuchsia Pink" itemprop="image">
+                            <img src="assets/optimized/gulbahaar-fuchsia.webp" width="640" height="1138" alt="Woman holding potli bag wearing Gulbahaar Fuchsia Silk Suit Set in Fuchsia Pink" itemprop="image" loading="lazy" decoding="async">
                         </div>
                         <div class="product-info">
                             <h3 itemprop="name">Gulbahaar Fuchsia Silk Suit Set</h3>
@@ -1022,7 +1042,7 @@
                             </ul>
                             <div itemprop="brand" itemscope itemtype="http://schema.org/Brand" style="display:none;"><meta itemprop="name" content="Kesari by Shammi Randhawa"></div>
                             <a href="https://www.instagram.com/kesaribyshammi_randhawa/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Inquire about Rani Noor Silk Set on Instagram">
-                                <i class="fab fa-instagram"></i> Inquire on Instagram
+                                <svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg> Inquire on Instagram
                             </a>
                         </div>
                     </div>
@@ -1030,7 +1050,7 @@
                     <!-- Product 4 -->
                     <div class="product-card" itemscope itemtype="http://schema.org/Product">
                         <div class="product-image-wrapper">
-                            <img src="assets/9tk8IFXDxlweELHBIIWkuJ.png" alt="Woman posing in Noor-E-Rani Embroidered Suit Set in Rani Pink" itemprop="image">
+                            <img src="assets/optimized/noor-e-rani.webp" width="640" height="1138" alt="Woman posing in Noor-E-Rani Embroidered Suit Set in Rani Pink" itemprop="image" loading="lazy" decoding="async">
                         </div>
                         <div class="product-info">
                             <h3 itemprop="name">Noor-E-Rani Embroidered Suit Set</h3>
@@ -1045,7 +1065,7 @@
                             </ul>
                             <div itemprop="brand" itemscope itemtype="http://schema.org/Brand" style="display:none;"><meta itemprop="name" content="Kesari by Shammi Randhawa"></div>
                             <a href="https://www.instagram.com/kesaribyshammi_randhawa/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Inquire about Noor-E-Rani Suit on Instagram">
-                                <i class="fab fa-instagram"></i> Inquire on Instagram
+                                <svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg> Inquire on Instagram
                             </a>
                         </div>
                     </div>
@@ -1066,7 +1086,7 @@
                         </div>
                     </div>
                     <div class="heritage-image">
-                        <div data-alt="Extreme close-up of a wooden embroidery hoop stretching a deep fuchsia pink silk fabric. A metallic gold thread is being pulled through by a silver needle, creating an intricate heritage motif. Spools of gold and copper thread lay softly out of focus in the background. Warm, natural side lighting emphasizes the texture of the silk and the reflective glint of the zari work. Cinematic, intimate, celebrating traditional craftsmanship. No text or lettering." style="background-image: url('assets/9kgCN2POmCqexh_ndIzkKe.jpg'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
+                        <div data-alt="Extreme close-up of a wooden embroidery hoop stretching a deep fuchsia pink silk fabric. A metallic gold thread is being pulled through by a silver needle, creating an intricate heritage motif. Spools of gold and copper thread lay softly out of focus in the background. Warm, natural side lighting emphasizes the texture of the silk and the reflective glint of the zari work. Cinematic, intimate, celebrating traditional craftsmanship. No text or lettering." style="background-image: url('assets/optimized/craftsmanship.webp'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
                     </div>
                 </div>
             </div>
@@ -1082,10 +1102,10 @@
                     <p itemprop="description">Bespoke Indian Couture rooted in Punjabi Heritage. We craft your thoughts to design.</p>
                     <div class="social-links" style="margin-top: 1.5rem; display: flex; gap: 1.2rem;">
                         <a href="https://www.facebook.com/KesariByShamiAndSuz" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" class="social-icon" itemprop="sameAs">
-                            <i class="fab fa-facebook fa-2x"></i>
+                            <svg class="icon" aria-hidden="true"><use href="#icon-facebook"></use></svg>
                         </a>
                         <a href="https://www.instagram.com/kesaribyshammi_randhawa/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="social-icon" itemprop="sameAs">
-                            <i class="fab fa-instagram fa-2x"></i>
+                            <svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>
                         </a>
                     </div>
                 </div>
