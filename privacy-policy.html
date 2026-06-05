@@ -28,22 +28,29 @@
     <style>
         :root { --orange:#F59120; --gold:#D4AF37; --cream:#F7E7CE; --dark:#2A1C14; --muted:#6b5f57; --line:#ead9bc; --font-heading:'Great Vibes', cursive; --font-body:'Montserrat', sans-serif; }
         * { box-sizing: border-box; }
-        body { margin: 0; font-family: var(--font-body); color: var(--dark); background: #fffaf2; line-height: 1.75; }
-        .container { width: min(960px, calc(100% - 32px)); margin: 0 auto; }
+        body { margin: 0; font-family: var(--font-body); color: var(--dark); background: #fffaf2; line-height: 1.75; overflow-x: hidden; }
+        .container { width: min(960px, calc(100% - 32px)); margin: 0 auto; min-width: 0; overflow-wrap: break-word; }
         header { padding: 28px 0; background: #fff; border-bottom: 1px solid var(--line); }
-        .brand { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+        .brand { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px 24px; }
         .brand a { color: var(--dark); text-decoration: none; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; font-size: 0.82rem; }
         .brand-logo { display: inline-flex; align-items: center; }
         .brand-logo img { width: 160px; height: auto; display: block; }
         main { padding: 64px 0; }
         h1 { font-family: var(--font-heading); color: var(--orange); font-size: clamp(3rem, 9vw, 5.5rem); line-height: 1; font-weight: 400; margin: 0 0 16px; }
         h2 { margin: 40px 0 12px; font-size: 1.15rem; letter-spacing: 1px; text-transform: uppercase; }
-        p, li { color: var(--muted); }
+        p, li { color: var(--muted); overflow-wrap: break-word; }
         ul { padding-left: 1.3rem; }
         .updated { color: var(--dark); font-weight: 600; }
         footer { padding: 32px 0; background: var(--dark); color: var(--cream); }
         footer a { color: var(--cream); }
         .footer-links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 8px; }
+        @media (max-width: 560px) { .container { width: min(300px, calc(100% - 72px)); } }
+        @media (max-width: 560px) {
+            .brand { justify-content: center; text-align: center; }
+            .brand a:last-child { width: 100%; }
+            main { padding: 48px 0; }
+            p, li { font-size: 0.96rem; line-height: 1.7; }
+        }
     </style>
 </head>
 <body>
@@ -59,7 +66,7 @@
     <main class="container">
         <h1>Privacy Policy</h1>
         <p class="updated">Last updated: June 5, 2026</p>
-        <p>Kesaribyshammirandhawa.com is the official website for Kesari by Shammi Randhawa, a bespoke Indian couture boutique in Chandigarh. This Privacy Policy explains what information may be collected when you visit the website or contact us through the channels shown on the site.</p>
+        <p>Kesaribyshammirandhawa.com is the official website for Kesari by Shammi Randhawa, a bespoke Indian couture boutique in Chandigarh, India. This Privacy Policy explains what information may be collected when you visit the website or contact us through the channels shown on the site.</p>
 
         <h2>Information We Collect</h2>
         <p>We do not sell products directly through this website and we do not collect payment information here. We may receive information in these ways:</p>
